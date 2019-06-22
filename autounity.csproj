@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>\
+      NET_TINY;\
+      NET_DOTS;\
+      UNITY_AVOID_REFLECTION;\
+      UNITY_CSHARP_TINY;\
+      UNITY_ZEROPLAYER;\
+      UNITY_DOTSPLAYER;\
+      UNITY_DISABLE_AUTOMATIC_SYSTEM_BOOTSTRAP;\
+      UNITY_2017_1_OR_NEWER;\
+      UNITY_2017_2_OR_NEWER;\
+      UNITY_2017_3_OR_NEWER;\
+      UNITY_2018_1_OR_NEWER;\
+      UNITY_2018_2_OR_NEWER;\
+      UNITY_2018_3_OR_NEWER;\
+      UNITY_2019_1_OR_NEWER;\
+      UNITY_2019_2_OR_NEWER;\
+    </DefineConstants>
+    <!--
+      WRITE_LOG;\
+      ENABLE_UNITY_COLLECTIONS_CHECKS;\
+      DEBUG;\
+      UNITY_WEBGL;\
+      UNITY_SINGLETHREADED_JOBS;\
+      UNITY_ASSERTIONS;\
+      UNITY_EDITOR;\
+      UNITY_USE_TINYMATH;\
+    -->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2019.1.1" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.2" />
+    <PackageReference Include="NDesk.Options" Version="0.2.1" />
+
+    <Compile Include="autounity/Assets/com.unity.burst/**/*.cs"       Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs" />
+    <Compile Include="autounity/Assets/com.unity.collections/**/*.cs" Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs" />
+    <Compile Include="autounity/Assets/com.unity.entities/**/*.cs"    Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs;**/*Hybrid*/**/*.cs" />
+    <Compile Include="autounity/Assets/com.unity.jobs/**/*.cs"        Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs" />
+    <Compile Include="autounity/Assets/com.unity.mathematics/**/*.cs" Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs;**/math_unity_conversion.cs;**/TypeConversion.cs;**/PropertyAttributes.cs" />
+    <Compile Include="autounity/Assets/com.unity.properties/**/*.cs"  Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs" />
+    <Compile Include="autounity/Assets/com.unity.tiny/**/*.cs"        Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs;**/*VideoHTML/*.cs" />
+    <Compile Include="autounity/Assets/com.unity.tiny/package/DotsPlayer/LowLevelSupport~/**/*.cs" Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/bee~/**/*.cs;**/cpp~/**/*.cs" />
+    <Reference Include="autounity/Assets/nuget.mono-cecil/**/*.dll" />
+    <Reference Include="autounity/Assets/nuget.castle-core/**/*.dll" />
+    <Reference Include="autounity/Assets/nuget.moq/**/*.dll" />
+  </ItemGroup>
+</Project>
