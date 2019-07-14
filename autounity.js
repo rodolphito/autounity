@@ -150,7 +150,7 @@ async function main(args)
 	}
 
 	const stage = args.stage || "unity-staging";
-	const company = args.company | "unity";
+	const company = args.company || "unity";
 	const repository = args.repository || `https://bintray.com/${company}/${stage}/`;
 	const name = args.name || "autounity";
 	const project = `./${name}/`;
