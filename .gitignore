@@ -2,6 +2,7 @@
 obj**
 bin**
 autounity/**
+.DS_Store
 
 # Node JS ignores
 
