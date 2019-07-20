@@ -39,14 +39,15 @@
     <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.2" />
     <PackageReference Include="NDesk.Options" Version="0.2.1" />
 
-    <Compile Include="autounity/Assets/com.unity.burst/**/*.cs"       Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs" />
-    <Compile Include="autounity/Assets/com.unity.collections/**/*.cs" Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs" />
-    <Compile Include="autounity/Assets/com.unity.entities/**/*.cs"    Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs;**/*Hybrid*/**/*.cs" />
-    <Compile Include="autounity/Assets/com.unity.jobs/**/*.cs"        Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs" />
-    <Compile Include="autounity/Assets/com.unity.mathematics/**/*.cs" Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs;**/math_unity_conversion.cs;**/TypeConversion.cs;**/PropertyAttributes.cs" />
-    <Compile Include="autounity/Assets/com.unity.properties/**/*.cs"  Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs" />
-    <Compile Include="autounity/Assets/com.unity.tiny/**/*.cs"        Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/*~/**/*.cs;**/*VideoHTML/*.cs" />
-    <Compile Include="autounity/Assets/com.unity.tiny/package/DotsPlayer/LowLevelSupport~/**/*.cs" Exclude="**/AssemblyInfo.cs;**/*Test*/**/*.cs;**/*Editor*/**/*.cs;**/bee~/**/*.cs;**/cpp~/**/*.cs" />
+    <Compile Include="autounity/Assets/com.unity.burst/**/*.cs"       Exclude="**/AssemblyInfo.cs;**/*Test*/**;**/*Editor*/**;**/*~/**" />
+    <Compile Include="autounity/Assets/com.unity.collections/**/*.cs" Exclude="**/AssemblyInfo.cs;**/*Test*/**;**/*Editor*/**;**/*~/**" />
+    <Compile Include="autounity/Assets/com.unity.entities/**/*.cs"    Exclude="**/AssemblyInfo.cs;**/*Test*/**;**/*Editor*/**;**/*~/**;**/*Hybrid*/**" />
+    <Compile Include="autounity/Assets/com.unity.jobs/**/*.cs"        Exclude="**/AssemblyInfo.cs;**/*Test*/**;**/*Editor*/**;**/*~/**" />
+    <Compile Include="autounity/Assets/com.unity.mathematics/**/*.cs" Exclude="**/AssemblyInfo.cs;**/*Test*/**;**/*Editor*/**;**/*~/**;**/math_unity_conversion.cs;**/TypeConversion.cs;**/PropertyAttributes.cs" />
+    <Compile Include="autounity/Assets/com.unity.properties/**/*.cs"  Exclude="**/AssemblyInfo.cs;**/*Test*/**;**/*Editor*/**;**/*~/**" />
+    <Compile Include="autounity/Assets/com.unity.tiny/**/*.cs"        Exclude="**/AssemblyInfo.cs;**/*Test*/**;**/*Editor*/**;**/*~/**;**/DotsModules/**;**/Unity.Authoring/**;**/Unity.Entities.Reflection/**;**/Unity.Serialization*/**;**/TypeRegGen/**" />
+    <Compile Include="autounity/Assets/com.unity.tiny/package/DotsPlayer/LowLevelSupport~/**/*.cs" Exclude="**/AssemblyInfo.cs;**/*Test*/**;**/*Editor*/**;**/bee~/**;**/cpp~/**" />
+    <Compile Include="src/**/*.cs" />
     <Reference Include="autounity/Assets/nuget.mono-cecil/**/*.dll" />
     <Reference Include="autounity/Assets/nuget.castle-core/**/*.dll" />
     <Reference Include="autounity/Assets/nuget.moq/**/*.dll" />
