@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "gunzip-maybe": "^1.4.1",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "request": "^2.88.0",
     "rimraf": "^2.6.3",
     "tar-fs": "^2.0.0"
